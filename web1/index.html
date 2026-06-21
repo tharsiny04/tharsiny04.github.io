@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowCare Skincare</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <h1>GlowCare</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Glow Naturally, Feel Beautiful</h2>
+      <p>Discover skincare products that nourish your skin every day.</p>
+      <button onclick="shopNow()">Shop Now</button>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products" id="products">
+    <h2>Our Skincare Products</h2>
+    <div class="product-container">
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500" alt="Face Wash">
+        <h3>Face Wash</h3>
+        <p>Fresh and gentle cleanser for daily use.</p>
+        <button onclick="addToCart('Face Wash')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500" alt="Moisturizer">
+        <h3>Moisturizer</h3>
+        <p>Hydrates your skin and keeps it soft all day.</p>
+        <button onclick="addToCart('Moisturizer')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=500" alt="Sunscreen">
+        <h3>Sunscreen</h3>
+        <p>Protect your skin from harmful UV rays.</p>
+        <button onclick="addToCart('Sunscreen')">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      GlowCare brings simple and effective skincare essentials for glowing,
+      healthy, and happy skin.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 GlowCare Skincare. All rights reserved.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
