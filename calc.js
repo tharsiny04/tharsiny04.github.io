@@ -1,59 +1,20 @@
-let currentInput = '';
-let currentOperation = '';
-let previousInput = '';
+const aboutBtn = document.getElementById("aboutBtn");
+const contactBtn = document.getElementById("contactBtn");
+const message = document.getElementById("message");
+const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.querySelector(".nav-links");
 
-function appendNumber(number) {
-    currentInput += number;
-    document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`;
-}
+// Scroll to About section
+aboutBtn.addEventListener("click", function () {
+  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+});
 
-function appendOperation(operation) {
-    if (currentInput === '') return;
-    if (previousInput !== '') {
-        calculate(); 
-    }
-    currentOperation = operation;
-    previousInput = currentInput;
-    currentInput = '';
-    document.getElementById('display').value = `${previousInput} ${currentOperation}`;
-}
+// Contact button message
+contactBtn.addEventListener("click", function () {
+  message.textContent = "Thank you for visiting my portfolio!";
+});
 
-function calculate() {
-    if (previousInput === '' || currentInput === '') return;
-    let result;
-    let prev = parseFloat(previousInput); //48
-    let current = parseFloat(currentInput); //2
-
-    switch (currentOperation) {
-        case '+':
-            result = prev + current;
-            break;
-        case '-':
-            result = prev - current;
-            break;
-        case '*':
-            result = prev * current;
-            break;
-        case '/':
-            if (current === 0) {
-                alert("Cannot divide by zero");
-                return;
-            }
-            result = prev / current;
-            break;
-        default:
-            return;
-    }
-
-    currentInput = result.toString();
-    currentOperation = '';
-    previousInput = '';
-    document.getElementById('display').value = currentInput;
-}
-
-function clearDisplay() {
-    currentInput = '';
-    previousInput = '';
-    currentOperation = '';
-    document.getElementById('display').value = '';
-}
+// Mobile menu toggle
+menuBtn.addEventListener("click", function () {
+  navLinks.classList.toggle("show");
+});
